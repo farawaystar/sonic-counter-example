@@ -1,16 +1,16 @@
 # Sonic Counter Example
 
-this is a demo code from https://docs.sonic.game/developers/getting-started/build-and-deploy-your-first-program
+This is a demo code for https://docs.sonic.game/developers/getting-started/build-and-deploy-your-first-program
 
 
 ## Directory Structure
 
-- `programs/sonic_example/` - The Anchor-based Solana program (Rust).
-- `app/sayHello.ts` - Example TypeScript script to interact with the deployed program.
-- `feepayer-wallet.json` - Local wallet used for signing transactions in the example script.
+- `programs/sonic_example/` - onchain program
+- `app/sayHello.ts` -client program
+- `feepayer-wallet.json` - wallet for signing transactions
 
 
-## Prerequisites
+**Prerequisites**
 Rust, Solana CLI, Node.js, Anchor
 
 1. **Build**
@@ -23,18 +23,16 @@ Rust, Solana CLI, Node.js, Anchor
    ```
    Update the program ID in both the Rust and TypeScript files
 
-3. **Run**
-
-1. Install yarn:
+3. **Install yarn**
    ```sh
    yarn install
    ```
-2. Run script:
+4. **Run script**
    ```sh
    ts-node app/sayHello.ts
    ```
    This script will create a new greeting account and increment the counter.
-   
+
 - Change the `programId` in `app/sayHello.ts` and `declare_id!` in the Rust program to match your deployed program.
 
 ## License
