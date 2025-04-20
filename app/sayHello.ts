@@ -53,7 +53,7 @@ async function sayHello() {
   });
 
   console.log('Greeting account created and initialized with public key:', greetedAccountPubkey.toBase58());
-  console.log(`Initialize transaction: [https://explorer.solana.com/tx/${initSig}?cluster=devnet`);
+  console.log(`Initialize transaction: [https://explorer.solana.com/tx/${initSig}?cluster=devnet]`);
 
   // Increment the greeting counter
   const incrementSig = await program.rpc.incrementGreeting({
@@ -64,7 +64,7 @@ async function sayHello() {
   });
 
   console.log('Greeting incremented');
-  console.log(`Increment transaction: [https://explorer.solana.com/tx/${incrementSig}?cluster=devnet`);
+  console.log(`Increment transaction: [https://explorer.solana.com/tx/${incrementSig}?cluster=devnet]`);
 
   // Fetch the account data
   const account = await program.account.greetingAccount.fetch(
